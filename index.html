@@ -1,85 +1,62 @@
+<!-- Draw.io-style textual representation of a Use Case Diagram -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Classifier UI</title>
+  <title>Food Classifier - Use Case Diagram</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
+      font-family: sans-serif;
+      background: #f0f0f0;
       padding: 20px;
     }
-    .container {
-      max-width: 600px;
-      margin: auto;
+    .diagram {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
       background: white;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1 {
-      text-align: center;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-    .button-row, .info-row, .action-row {
+    .actor {
       display: flex;
-      justify-content: space-around;
-      margin: 10px 0;
-    }
-    .btn {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-    .info-box {
-      background: #e9ecef;
-      padding: 10px;
-      border-radius: 5px;
-      margin: 5px 0;
-    }
-    .label {
+      align-items: center;
+      justify-content: center;
       font-weight: bold;
+    }
+    .use-cases {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .use-case {
+      background: #e9ecef;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🍱 Food Classifier Web App</h1>
-    <div class="button-row">
-      <button class="btn">📤 Upload Image</button>
-      <button class="btn">📸 Live Camera</button>
-      <button class="btn">🔑 Sign In</button>
+  <h2 style="text-align:center;">Use Case Diagram - Food Classifier Web App</h2>
+  <div class="diagram">
+    <div class="actor">
+      👤 User
     </div>
-
-    <div class="info-box">
-      <p class="label">🔍 Predicted:</p>
-      <p>Sushi (93%)</p>
-    </div>
-    <div class="info-box">
-      <p class="label">📊 Confidence:</p>
-      <p>Sushi 93% | Salad 4% | Burger 3%</p>
-    </div>
-    <div class="info-box">
-      <p class="label">🍎 Nutritional Info:</p>
-      <p>Calories: 250 kcal | Protein: 12g | Carbs: 30g</p>
-    </div>
-
-    <div class="action-row">
-      <button class="btn">💾 Save Result</button>
-      <button class="btn">📈 View History</button>
-      <button class="btn">🧠 Change Model</button>
-    </div>
-    <div class="button-row">
-      <button class="btn">📁 Batch Upload</button>
-      <button class="btn">🔄 Clear History</button>
-      <button class="btn">⚙️ Settings</button>
+    <div class="use-cases">
+      <div class="use-case">Upload Food Image</div>
+      <div class="use-case">Capture Image via Camera</div>
+      <div class="use-case">View Prediction Results</div>
+      <div class="use-case">Check Confidence Scores</div>
+      <div class="use-case">See Nutritional Info</div>
+      <div class="use-case">Switch Classification Model</div>
+      <div class="use-case">View History</div>
+      <div class="use-case">Download Results</div>
+      <div class="use-case">Clear History</div>
+      <div class="use-case">Sign In/Sign Out</div>
     </div>
   </div>
 </body>
